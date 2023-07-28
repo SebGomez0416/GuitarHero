@@ -9,12 +9,7 @@ public class Nota : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    private void Update()
-    {
-        if (rb.position.z <= -11) Spawn();
-    }
-
+    
     private void FixedUpdate()
     {
        Movement();
@@ -30,10 +25,4 @@ public class Nota : MonoBehaviour
         
         rb.MovePosition(rb.position+movement);
     }
-
-    private void Spawn()
-    {
-        rb.position= Vector3.zero;
-    }
-
 }
