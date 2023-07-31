@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
    [SerializeField]private List<AudioSource> tracks;
+   [SerializeField] private AudioSource failNote;
    private bool pause;
    [SerializeField] private float delay;
 
-  
    private void Start()
    {
      Play();
@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
    {
       Nota.OnWrongNote += IsMute;
       Nota.OnCorrectNote += IsMute;
+      Nota.OnFail += BadNote;
       Tail.OnWrongNote += IsMute;
    }
 
@@ -25,6 +26,7 @@ public class AudioManager : MonoBehaviour
    {
       Nota.OnWrongNote -= IsMute;
       Nota.OnCorrectNote -= IsMute;
+      Nota.OnFail -= BadNote;
       Tail.OnWrongNote -= IsMute;
    }
 
@@ -38,6 +40,11 @@ public class AudioManager : MonoBehaviour
       tracks[0].mute = mute;
    }
 
+   private void BadNote()
+   {
+      failNote.Play();
+   }
+
    private void Pause()
    {
       foreach (var track in tracks)
@@ -49,7 +56,8 @@ public class AudioManager : MonoBehaviour
       foreach (var track in tracks)
          track.UnPause();
    }
-   
+
+
 
    private void Play()
    {

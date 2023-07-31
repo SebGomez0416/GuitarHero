@@ -21,7 +21,7 @@ public class Tail : MonoBehaviour
    {
       Movement();
 
-      if (Input.GetKey(KeyCode.Alpha1)&& _tail)
+      if (Input.GetKey(KeyCode.Joystick1Button1)&& _tail)
       {
          if (!fire)
          {
@@ -47,7 +47,6 @@ public class Tail : MonoBehaviour
 
       if (transform.position.z < 0)
       {
-         //OnWrongNote?.Invoke(true);
          OnFire?.Invoke(false);
          Destroy(gameObject);
       }

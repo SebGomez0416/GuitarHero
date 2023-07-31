@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GreenNote : MonoBehaviour
@@ -20,7 +21,6 @@ public class GreenNote : MonoBehaviour
     {
         fire.Play();
     }
-
     private  void ActiveTailFire(bool active)
     {
         if (active)
