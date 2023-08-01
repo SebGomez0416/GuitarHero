@@ -14,20 +14,20 @@ public class Tail : MonoBehaviour
       set => _tail = value;
    }
 
-   public static event Action <bool> OnFire;
+   public static event Action <bool,float> OnFire;
    public static event Action <bool> OnWrongNote;
 
    private void Update()
    {
       Movement();
 
-      if (Input.GetKey(KeyCode.Joystick1Button1)&& _tail)
+      if (Input.GetKey(KeyCode.Alpha1)&& _tail)
       {
          if (!fire)
          {
             meshRenderer.material = materials[0];
             meshRenderer.materials[1].color = materials[1].color;
-            OnFire?.Invoke(true);
+            OnFire?.Invoke(true,transform.position.x);
             fire = true;
          }
       }
@@ -36,7 +36,7 @@ public class Tail : MonoBehaviour
          if (fire)
          {
             OnWrongNote?.Invoke(true);
-            OnFire?.Invoke(false);
+            OnFire?.Invoke(false,transform.position.x);
             meshRenderer.material = materials[2];
             meshRenderer.materials[1].color = materials[3].color;
            
@@ -47,7 +47,7 @@ public class Tail : MonoBehaviour
 
       if (transform.position.z < 0)
       {
-         OnFire?.Invoke(false);
+         OnFire?.Invoke(false,transform.position.x);
          Destroy(gameObject);
       }
    }
