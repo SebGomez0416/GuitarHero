@@ -8,28 +8,41 @@ public class Tail : MonoBehaviour
    [SerializeField] private List<Material> materials;
    [SerializeField] private MeshRenderer meshRenderer;
    private bool _tail;
+   private string _colorNotes;
+
    private bool fire;
    public bool _Tail
    {
       set => _tail = value;
    }
+   
+   public string _ColorNotes
+   {
+      get => _colorNotes;
+      set => _colorNotes = value;
+   }
 
    public static event Action <bool,float> OnFire;
    public static event Action <bool> OnWrongNote;
 
+   private void Awake()
+   {;
+      _colorNotes = "Green";
+      
+   }
+
    private void Update()
    {
       Movement();
-
-      if (Input.GetKey(KeyCode.Alpha1)&& _tail)
+      if (Input.GetButton(_colorNotes)&& _tail)
       {
-         if (!fire)
-         {
+        if(!fire)
+        {
             meshRenderer.material = materials[0];
             meshRenderer.materials[1].color = materials[1].color;
             OnFire?.Invoke(true,transform.position.x);
             fire = true;
-         }
+        }
       }
       else
       {

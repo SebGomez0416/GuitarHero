@@ -13,8 +13,6 @@ public class Nota : MonoBehaviour
     public static event Action <bool> OnCorrectNote;
     public static event Action <float>OnFire;
     public static event Action OnFail;
-    
-
 
     private void Update()
     {
@@ -26,17 +24,21 @@ public class Nota : MonoBehaviour
     {
         if (Input.GetButtonDown(ColorNote) &&  Input.GetAxis("Vertical") == -0.1f || Input.GetAxis("Vertical") == 0.1f)
         {
-            if ( transform.position.z <= 0.4f && transform.position.z >= -0.4f && isActive)
+            if ( transform.position.z <= 0.5f && transform.position.z >= -0.5f && isActive)
             {
                 isActive = false;
-                if(tail!= null)tail._Tail = true;
+                if (tail != null)
+                {
+                    tail._Tail = true;
+                    tail._ColorNotes = ColorNote;
+                }
                 OnCorrectNote?.Invoke(false);
                 OnFire?.Invoke(transform.position.x);
                 Destroy(gameObject);
             }
         }
         
-        if (transform.position.z < -0.41f  && isActive)
+        if (transform.position.z < -0.51f  && isActive)
         {
             OnWrongNote?.Invoke(true);
             OnFail?.Invoke();

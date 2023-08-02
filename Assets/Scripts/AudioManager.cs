@@ -41,8 +41,13 @@ public class AudioManager : MonoBehaviour
    }
 
    private void BadNote()
-   {
-      failNote.Play();
+   {;
+      int rand = Random.Range(0, 3);
+      if (rand == 0)
+      {
+         failNote.Play();
+      }
+     
    }
 
    private void Pause()
