@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nota : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    private float speed= 2.5f;
     private bool isActive = true;
     [SerializeField] private Tail tail;
     [SerializeField] private string ColorNote;
@@ -22,23 +22,27 @@ public class Nota : MonoBehaviour
 
     private void CheckNote()
     {
-        if (Input.GetButtonDown(ColorNote) &&  Input.GetAxis("Vertical") == -0.1f || Input.GetAxis("Vertical") == 0.1f)
-        {
-            if ( transform.position.z <= 0.5f && transform.position.z >= -0.5f && isActive)
+        /*if (Input.GetAxis("Vertical")*Time.deltaTime != 0)*/
+       // {
+            if (Input.GetButtonDown(ColorNote) )
             {
-                isActive = false;
-                if (tail != null)
+                if ( transform.position.z <= 0.45f && transform.position.z >= -0.3f && isActive)
                 {
-                    tail._Tail = true;
-                    tail._ColorNotes = ColorNote;
+                    isActive = false;
+                    if (tail != null)
+                    {
+                        tail._Tail = true;
+                        tail._ColorNotes = ColorNote;
+                    }
+                    OnCorrectNote?.Invoke(false);
+                    OnFire?.Invoke(transform.position.x);
+                    Destroy(gameObject);
                 }
-                OnCorrectNote?.Invoke(false);
-                OnFire?.Invoke(transform.position.x);
-                Destroy(gameObject);
             }
-        }
+       // }
         
-        if (transform.position.z < -0.51f  && isActive)
+        
+        if (transform.position.z < -0.31f  && isActive)
         {
             OnWrongNote?.Invoke(true);
             OnFail?.Invoke();

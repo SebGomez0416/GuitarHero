@@ -4,6 +4,7 @@ using UnityEngine;
 public class FireNotes : MonoBehaviour
 {
     [SerializeField] private List <ParticleSystem> fires;
+    private int notas;
 
     private void OnEnable()
     {
@@ -20,6 +21,7 @@ public class FireNotes : MonoBehaviour
     private void ActiveFire(float color)
     {
         fires[(int)color].Play();
+        notas++;
     }
     private  void ActiveTailFire(bool active,float color)
     {

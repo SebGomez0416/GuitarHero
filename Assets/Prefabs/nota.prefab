@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad6808871cec724689688fe77e092e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2.5
   tail: {fileID: 0}
+  ColorNote: Green
 --- !u!1001 &5480637053124073789
 PrefabInstance:
   m_ObjectHideFlags: 0

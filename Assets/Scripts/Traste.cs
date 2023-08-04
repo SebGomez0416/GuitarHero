@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Traste : MonoBehaviour
 {
-    private float speed = 3.0f;
+    private float speed = 2.5f;
 
     private void Update()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tail : MonoBehaviour
 {
-   private float speed = 3;
+   private float speed = 2.5f;
    [SerializeField] private List<Material> materials;
    [SerializeField] private MeshRenderer meshRenderer;
    private bool _tail;
