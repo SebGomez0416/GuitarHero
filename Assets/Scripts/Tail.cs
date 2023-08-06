@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tail : MonoBehaviour
 {
-   private float speed = 2.5f;
+   private float speed;
    [SerializeField] private List<Material> materials;
    [SerializeField] private MeshRenderer meshRenderer;
    private bool _tail;
@@ -26,9 +27,9 @@ public class Tail : MonoBehaviour
    public static event Action <bool> OnWrongNote;
 
    private void Awake()
-   {;
+   {
+      speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
       _colorNotes = "Green";
-      
    }
 
    private void Update()

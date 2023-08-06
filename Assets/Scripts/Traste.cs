@@ -1,8 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Traste : MonoBehaviour
 {
-    private float speed = 2.5f;
+    private float speed;
+    
+    private void Awake()
+    {
+        speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
+    }
 
     private void Update()
     {

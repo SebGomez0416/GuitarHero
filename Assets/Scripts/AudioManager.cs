@@ -63,7 +63,6 @@ public class AudioManager : MonoBehaviour
    }
 
 
-
    private void Play()
    {
       foreach (var track in tracks)
@@ -72,7 +71,7 @@ public class AudioManager : MonoBehaviour
 
    private void EditSong()
    {
-      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("GamePlay");
+      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
       if (Input.GetKeyDown(KeyCode.Space)) pause = !pause;
 
@@ -85,6 +84,15 @@ public class AudioManager : MonoBehaviour
       {
          Time.timeScale = 1;
          UnPause();
+      }
+
+      if (Input.GetKeyDown(KeyCode.F1))
+      {
+         if (SceneManager.GetActiveScene().name == "Tiene Razon")
+         {
+            SceneManager.LoadScene("Sobre la Mesa");
+         }
+         else SceneManager.LoadScene("Tiene Razon");
       }
 
    }

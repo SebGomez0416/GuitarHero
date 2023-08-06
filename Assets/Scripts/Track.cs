@@ -3,15 +3,29 @@ using UnityEngine;
 
 public class Track : MonoBehaviour
 {
-    public GameObject nota;
+    public GameObject green;
+    public GameObject red;
+    public GameObject yellow;
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetButtonDown("Green"))
         {
-          Instantiate(nota,Vector3.zero,quaternion.identity,this.transform);
+          Instantiate(green,Vector3.zero,quaternion.identity,this.transform);
           Time.timeScale = 0;
+        }
+        
+        if (Input.GetButtonDown("Red"))
+        {
+            Instantiate(red,new Vector3(1,0,0),quaternion.identity,this.transform);
+            Time.timeScale = 0;
+        }
+        
+        if (Input.GetButtonDown("Yellow"))
+        {
+            Instantiate(yellow,new Vector3(2,0,0),quaternion.identity,this.transform);
+            Time.timeScale = 0;
         }
     }
 }

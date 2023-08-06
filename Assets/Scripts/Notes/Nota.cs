@@ -1,10 +1,10 @@
-
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Nota : MonoBehaviour
 {
-    private float speed= 2.5f;
+    private float speed;
     private bool isActive = true;
     [SerializeField] private Tail tail;
     [SerializeField] private string ColorNote;
@@ -14,16 +14,21 @@ public class Nota : MonoBehaviour
     public static event Action <float>OnFire;
     public static event Action OnFail;
 
+    private void Awake()
+    {
+        speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
+    }
+
     private void Update()
     {
        Movement();
-       CheckNote();
+      // CheckNote();
     }
 
     private void CheckNote()
     {
-        /*if (Input.GetAxis("Vertical")*Time.deltaTime != 0)*/
-       // {
+        if (Input.GetAxis("Vertical")*Time.deltaTime != 0)
+        {
             if (Input.GetButtonDown(ColorNote) )
             {
                 if ( transform.position.z <= 0.45f && transform.position.z >= -0.3f && isActive)
@@ -39,9 +44,8 @@ public class Nota : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-       // }
-        
-        
+        }
+
         if (transform.position.z < -0.31f  && isActive)
         {
             OnWrongNote?.Invoke(true);
