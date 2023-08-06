@@ -95,5 +95,10 @@ public class AudioManager : MonoBehaviour
          else SceneManager.LoadScene("Tiene Razon");
       }
 
+      if (Input.GetKeyDown(KeyCode.F2))
+      {
+         SceneManager.LoadScene("Es el Amor");
+      }
+
    }
 }

@@ -13,21 +13,23 @@ public class Nota : MonoBehaviour
     public static event Action <bool> OnCorrectNote;
     public static event Action <float>OnFire;
     public static event Action OnFail;
+    private bool easyMod;
 
     private void Awake()
     {
         speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
+        easyMod = SceneManager.GetActiveScene().name == "Es el Amor" ? true : false;
     }
 
     private void Update()
     {
        Movement();
-      // CheckNote();
+       CheckNote();
     }
 
     private void CheckNote()
     {
-        if (Input.GetAxis("Vertical")*Time.deltaTime != 0)
+        if (Input.GetAxis("Vertical")*Time.deltaTime != 0 || easyMod)
         {
             if (Input.GetButtonDown(ColorNote) )
             {
