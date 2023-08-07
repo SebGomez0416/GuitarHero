@@ -18,36 +18,44 @@ public class Nota : MonoBehaviour
     private void Awake()
     {
         speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
-        easyMod = SceneManager.GetActiveScene().name == "Es el Amor" ? true : false;
+    }
+
+    private void OnEnable()
+    {
+        Bridge.OnPlayNote += CheckNote;
+    }
+
+    private void OnDisable()
+    {
+        Bridge.OnPlayNote -= CheckNote;
     }
 
     private void Update()
     {
        Movement();
-       CheckNote();
+       FailNote();
     }
 
-    private void CheckNote()
+    private void CheckNote(string color)
     {
-        if (Input.GetAxis("Vertical")*Time.deltaTime != 0 || easyMod)
+        if (ColorNote != color) return;
+        
+        if( transform.position.z <= 0.4f && transform.position.z >= -0.3f && isActive)
         {
-            if (Input.GetButtonDown(ColorNote) )
+            isActive = false;
+            if (tail != null)
             {
-                if ( transform.position.z <= 0.45f && transform.position.z >= -0.3f && isActive)
-                {
-                    isActive = false;
-                    if (tail != null)
-                    {
-                        tail._Tail = true;
-                        tail._ColorNotes = ColorNote;
-                    }
-                    OnCorrectNote?.Invoke(false);
-                    OnFire?.Invoke(transform.position.x);
-                    Destroy(gameObject);
-                }
+              tail._Tail = true;
+              tail._ColorNotes = ColorNote;
             }
+            OnCorrectNote?.Invoke(false);
+            OnFire?.Invoke(transform.position.x);
+            Destroy(gameObject);
         }
+    }
 
+    private void FailNote()
+    {
         if (transform.position.z < -0.31f  && isActive)
         {
             OnWrongNote?.Invoke(true);

@@ -86,7 +86,7 @@ public class AudioManager : MonoBehaviour
          UnPause();
       }
 
-      if (Input.GetKeyDown(KeyCode.F1))
+      if (Input.GetKeyDown(KeyCode.Alpha1))
       {
          if (SceneManager.GetActiveScene().name == "Tiene Razon")
          {
@@ -95,10 +95,16 @@ public class AudioManager : MonoBehaviour
          else SceneManager.LoadScene("Tiene Razon");
       }
 
-      if (Input.GetKeyDown(KeyCode.F2))
+      if (Input.GetKeyDown(KeyCode.Alpha2))
       {
          SceneManager.LoadScene("Es el Amor");
       }
+      
+      if (Input.GetKeyDown(KeyCode.Alpha4))
+      {
+         Application.Quit();
+      }
+      
 
    }
 }

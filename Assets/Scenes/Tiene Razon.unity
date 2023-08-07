@@ -1606,6 +1606,12 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &381433155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1496995622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &391435689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f10df201bff85fe43b37335934cbd5bf,
@@ -2528,6 +2534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque_07
       objectReference: {fileID: 0}
+    - target: {fileID: 4888697922002596835, guid: cd44ed57a64da144e829ebe1402342b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd44ed57a64da144e829ebe1402342b7, type: 3}
 --- !u!1001 &819264923
@@ -2541,6 +2552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bloque_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147959136090353620, guid: 95ad169877beeff45b001771fe482dca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4147959136090353621, guid: 95ad169877beeff45b001771fe482dca,
         type: 3}
@@ -2803,6 +2819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque_04
       objectReference: {fileID: 0}
+    - target: {fileID: 2337318800599562934, guid: 14439d22536efdd4ab50b1d7875c5338,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2337318800599562937, guid: 14439d22536efdd4ab50b1d7875c5338,
         type: 3}
       propertyPath: m_RootOrder
@@ -2971,6 +2992,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7565904049038989956, guid: fd39d7fb9790f694d8242a5fed8f0fe1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7565904049038989957, guid: fd39d7fb9790f694d8242a5fed8f0fe1,
         type: 3}
       propertyPath: m_RootOrder
@@ -3045,6 +3071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bloque_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738995342813548860, guid: a0bdfa12464ac4b4e824e1693e0c783e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2738995342813548861, guid: a0bdfa12464ac4b4e824e1693e0c783e,
         type: 3}
@@ -3976,6 +4007,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1496995622}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496995626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381433155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cc4becf612b4f4a9bcfbb1f29f7b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorNote: Blue
+  playNote: {fileID: 2100000, guid: cb7a009d9357e434c9d625bb1594f8ee, type: 2}
 --- !u!1 &1497198775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,6 +5026,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1704704019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1835951264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1470487902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1835951267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835951264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cc4becf612b4f4a9bcfbb1f29f7b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorNote: Red
+  playNote: {fileID: 2100000, guid: 3530be252bbb83641a8cf5f726142e61, type: 2}
 --- !u!1 &1849713277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5770,8 +5835,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque_05
       objectReference: {fileID: 0}
+    - target: {fileID: 3748771999461751075, guid: 408b44d8e05a5c341a39356d02241879,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 408b44d8e05a5c341a39356d02241879, type: 3}
+--- !u!1 &2026630209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+    type: 3}
+  m_PrefabInstance: {fileID: 395754911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2026630212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026630209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cc4becf612b4f4a9bcfbb1f29f7b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorNote: Yellow
+  playNote: {fileID: 2100000, guid: 8dfe1105dd3c6cb428121a26fff873ad, type: 2}
 --- !u!198 &2092635905 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2550160821495592746, guid: effaaa665bce18747b546d1bc5c10965,
@@ -5842,6 +5932,12 @@ MonoBehaviour:
   - {fileID: 1497198777}
   failNote: {fileID: 1285966746}
   delay: 3
+--- !u!1 &2125655617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4717639548187024068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2140019638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6237,6 +6333,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4717639548187024068}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4717639548187024072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125655617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cc4becf612b4f4a9bcfbb1f29f7b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorNote: Green
+  playNote: {fileID: 2100000, guid: 870db84fc17724d4da9dac484f6de0d6, type: 2}
 --- !u!1001 &9017110974333806045
 PrefabInstance:
   m_ObjectHideFlags: 0
