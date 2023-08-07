@@ -6,11 +6,14 @@ public class Bridge : MonoBehaviour
 {
     [SerializeField] private string ColorNote;
     [SerializeField] private Material playNote;
+
     private MeshRenderer mesh;
     private Material note;
+    private Material _cord;
     private bool easyMod;
     public static event Action <string> OnPlayNote;
     private bool isActive;
+    
 
     private void Awake()
     {
@@ -25,8 +28,8 @@ public class Bridge : MonoBehaviour
         {
             if (!isActive)
             {
-                OnPlayNote?.Invoke(ColorNote);
-                isActive = true;
+               OnPlayNote?.Invoke(ColorNote);
+               isActive = true;
             }
             
             mesh.material = playNote;
@@ -36,9 +39,9 @@ public class Bridge : MonoBehaviour
         }
         else
         {
-            isActive = false;
-            mesh.material = note;
-            transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
+           isActive = false;
+           mesh.material = note;
+           transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
         }
     }
 }
