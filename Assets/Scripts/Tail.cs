@@ -10,6 +10,7 @@ public class Tail : MonoBehaviour
    [SerializeField] private MeshRenderer meshRenderer;
    private bool _tail;
    private string _colorNotes;
+   private bool init;
 
    private bool fire;
    public bool _Tail
@@ -28,8 +29,14 @@ public class Tail : MonoBehaviour
 
    private void Awake()
    {
+      Invoke("Init",3);
       speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
       _colorNotes = "Green";
+   }
+   
+   private void Init()
+   {
+      init = true;
    }
 
    private void Update()
@@ -68,6 +75,7 @@ public class Tail : MonoBehaviour
    
    private void Movement()
    {
+      if (!init) return;
       Vector3 movement;
 
       movement.x =0;

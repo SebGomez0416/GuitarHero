@@ -6,6 +6,7 @@ public class Track : MonoBehaviour
     public GameObject green;
     public GameObject red;
     public GameObject yellow;
+    public GameObject blue;
 
 
     void Update()
@@ -13,19 +14,25 @@ public class Track : MonoBehaviour
         if (Input.GetButtonDown("Green"))
         {
           Instantiate(green,Vector3.zero,quaternion.identity,this.transform);
-          Time.timeScale = 0;
+          
         }
         
         if (Input.GetButtonDown("Red"))
         {
             Instantiate(red,new Vector3(1,0,0),quaternion.identity,this.transform);
-            Time.timeScale = 0;
+            
         }
         
         if (Input.GetButtonDown("Yellow"))
         {
             Instantiate(yellow,new Vector3(2,0,0),quaternion.identity,this.transform);
-            Time.timeScale = 0;
+            
+        }
+        
+        if (Input.GetButtonDown("Blue"))
+        {
+            Instantiate(blue,new Vector3(3,0,0),quaternion.identity,this.transform);
+            
         }
     }
 }

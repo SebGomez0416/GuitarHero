@@ -24,7 +24,7 @@ public class Bridge : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetButton(ColorNote) && Input.GetAxis("Vertical") * Time.deltaTime != 0 )
+        if (Input.GetButton(ColorNote) && Input.GetAxis("Nota") * Time.deltaTime != 0 )
         {
             if (!isActive)
             {

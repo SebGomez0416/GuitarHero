@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,9 +11,11 @@ public class AudioManager : MonoBehaviour
    private bool pause;
    [SerializeField] private float delay;
 
-   private void Start()
+   private void Awake()
    {
-     Play();
+      //Cursor.visible = false;
+      Time.timeScale = 1;
+      Invoke("Play",3); 
    }
 
    private void OnEnable()
@@ -20,6 +24,8 @@ public class AudioManager : MonoBehaviour
       Nota.OnCorrectNote += IsMute;
       Nota.OnFail += BadNote;
       Tail.OnWrongNote += IsMute;
+      EndNote.OnGameOver += GameOver;
+      HUD.OnGameOver += GameOver;
    }
 
    private void OnDisable()
@@ -28,6 +34,8 @@ public class AudioManager : MonoBehaviour
       Nota.OnCorrectNote -= IsMute;
       Nota.OnFail -= BadNote;
       Tail.OnWrongNote -= IsMute;
+      EndNote.OnGameOver -= GameOver;
+      HUD.OnGameOver -= GameOver;
    }
 
    private void Update()
@@ -69,42 +77,34 @@ public class AudioManager : MonoBehaviour
          track.PlayDelayed(delay);
    }
 
-   private void EditSong()
+   private void GameOver()
    {
-      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-      if (Input.GetKeyDown(KeyCode.Space)) pause = !pause;
-
+      pause = !pause;
       if (pause)
       {
          Time.timeScale=0;
          Pause();
       }
-      else
-      {
-         Time.timeScale = 1;
-         UnPause();
-      }
+   }
 
-      if (Input.GetKeyDown(KeyCode.Alpha1))
+   private void EditSong()
+   {
+      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Tiene Razon");
+
+      if (Input.GetKeyDown(KeyCode.Space))
       {
-         if (SceneManager.GetActiveScene().name == "Tiene Razon")
+         pause = !pause;
+         
+         if (pause)
          {
-            SceneManager.LoadScene("Sobre la Mesa");
+            Time.timeScale=0;
+            Pause();
          }
-         else SceneManager.LoadScene("Tiene Razon");
+         else
+         {
+            Time.timeScale = 1;
+            UnPause();
+         }
       }
-
-      if (Input.GetKeyDown(KeyCode.Alpha2))
-      {
-         SceneManager.LoadScene("Es el Amor");
-      }
-      
-      if (Input.GetKeyDown(KeyCode.Alpha4))
-      {
-         Application.Quit();
-      }
-      
-
    }
 }

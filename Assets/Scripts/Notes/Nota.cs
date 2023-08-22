@@ -13,11 +13,14 @@ public class Nota : MonoBehaviour
     public static event Action <bool> OnCorrectNote;
     public static event Action <float>OnFire;
     public static event Action OnFail;
+    public static event Action OnUpdateScore;
     private bool easyMod;
+    private bool init;
 
     private void Awake()
-    {
-        speed = SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
+    { 
+        Invoke("Init",3);
+        speed =SceneManager.GetActiveScene().name == "Tiene Razon" ? 3.0f : 2.5f;
     }
 
     private void OnEnable()
@@ -28,6 +31,11 @@ public class Nota : MonoBehaviour
     private void OnDisable()
     {
         Bridge.OnPlayNote -= CheckNote;
+    }
+
+    private void Init()
+    {
+        init = true;
     }
 
     private void Update()
@@ -49,6 +57,7 @@ public class Nota : MonoBehaviour
               tail._ColorNotes = ColorNote;
             }
             OnCorrectNote?.Invoke(false);
+            OnUpdateScore?.Invoke();
             OnFire?.Invoke(transform.position.x);
             Destroy(gameObject);
         }
@@ -66,6 +75,7 @@ public class Nota : MonoBehaviour
 
     private void Movement()
     {
+        if (!init) return;
         Vector3 movement;
 
         movement.x =0;
