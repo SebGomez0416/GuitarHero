@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
    private void Awake()
    {
-      //Cursor.visible = false;
+      Cursor.visible = false;
       Time.timeScale = 1;
       Invoke("Play",3); 
    }
@@ -89,7 +88,7 @@ public class AudioManager : MonoBehaviour
 
    private void EditSong()
    {
-      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Tiene Razon");
+      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Menu");
 
       if (Input.GetKeyDown(KeyCode.Space))
       {

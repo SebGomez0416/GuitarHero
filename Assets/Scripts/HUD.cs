@@ -56,6 +56,46 @@ public class HUD : MonoBehaviour
     {
         switch (notas)
         {
+            case 300:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 275:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 250:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 225:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 200:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 175:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 150:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
+            case 125:
+                Notas.text = "x" + notas;
+                failNotes = 0;
+                Invoke("CleanNotes", 2);
+                break;
             case 100:
                 Notas.text = "x" + notas;
                 failNotes = 0;

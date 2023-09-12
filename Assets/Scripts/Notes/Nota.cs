@@ -75,7 +75,7 @@ public class Nota : MonoBehaviour
 
     private void Movement()
     {
-        if (!init) return;
+       if (!init) return;
         Vector3 movement;
 
         movement.x =0;
