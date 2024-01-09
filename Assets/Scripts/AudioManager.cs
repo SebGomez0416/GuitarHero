@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
       Cursor.visible = false;
       Time.timeScale = 1;
       Invoke("Play",3); 
+      Play();
    }
 
    private void OnEnable()
@@ -88,7 +89,7 @@ public class AudioManager : MonoBehaviour
 
    private void EditSong()
    {
-      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Menu");
+      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Deus da Forca");
 
       if (Input.GetKeyDown(KeyCode.Space))
       {
