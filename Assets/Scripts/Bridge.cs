@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Bridge : MonoBehaviour
@@ -21,27 +22,26 @@ public class Bridge : MonoBehaviour
         note= mesh.material;
         easyMod = SceneManager.GetActiveScene().name == "Es el Amor" ? true : false;
     }
-    
-    private void Update()
+
+    public void Nota(InputAction.CallbackContext callbackContext)
     {
-        if (Input.GetButton(ColorNote) && Input.GetAxis("Nota") * Time.deltaTime != 0 )
+        if (callbackContext.performed)
         {
             if (!isActive)
             {
-               OnPlayNote?.Invoke(ColorNote);
-               isActive = true;
+                OnPlayNote?.Invoke(ColorNote);
+                isActive = true;
             }
             
             mesh.material = playNote;
-           transform.position = new Vector3(transform.position.x, -0.45f, transform.position.z);
-            
-           
+            transform.position = new Vector3(transform.position.x, -0.45f, transform.position.z);
         }
-        else
+
+        if (callbackContext.canceled)
         {
-           isActive = false;
-           mesh.material = note;
-           transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
+            isActive = false;
+            mesh.material = note;
+            transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
         }
     }
 }
