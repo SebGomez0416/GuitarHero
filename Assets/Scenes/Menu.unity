@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07075238, g: 0.037530694, b: 0.04824888, a: 1}
+  m_IndirectSpecularColor: {r: 0.07098969, g: 0.0371413, b: 0.048188373, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -508,6 +508,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1258643099366088230, guid: 202f4cd48655e68408c3c91e9d4c69d7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258643099366088230, guid: 202f4cd48655e68408c3c91e9d4c69d7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258643099366088230, guid: 202f4cd48655e68408c3c91e9d4c69d7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4259551826035460050, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
       propertyPath: m_IsActive
@@ -536,12 +551,12 @@ PrefabInstance:
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15
+      value: -16.2
       objectReference: {fileID: 0}
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.77
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
@@ -551,7 +566,7 @@ PrefabInstance:
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
@@ -566,7 +581,7 @@ PrefabInstance:
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
@@ -581,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 5131159178274317038, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 5511942751840041044, guid: 202f4cd48655e68408c3c91e9d4c69d7,
         type: 3}
@@ -592,6 +607,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428998530800645811, guid: 202f4cd48655e68408c3c91e9d4c69d7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428998530800645811, guid: 202f4cd48655e68408c3c91e9d4c69d7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428998530800645811, guid: 202f4cd48655e68408c3c91e9d4c69d7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 202f4cd48655e68408c3c91e9d4c69d7, type: 3}
@@ -632,7 +662,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.7254902, g: 0.5803922, b: 0.32156864, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -648,7 +678,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 19
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 4.88
   m_Depth: -1
   m_CullingMask:
@@ -673,7 +703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 5.52, z: -4.43}
+  m_LocalPosition: {x: -2.67, y: -0.1, z: -17.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

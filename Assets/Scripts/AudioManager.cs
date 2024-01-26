@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
+using UnityEngine.InputSystem;
 
 public class AudioManager : MonoBehaviour
 {
@@ -38,11 +39,6 @@ public class AudioManager : MonoBehaviour
       HUD.OnGameOver -= GameOver;
    }
 
-   private void Update()
-   {
-      EditSong();
-   }
-
    private void IsMute(bool mute) 
    {
       tracks[0].mute = mute;
@@ -58,7 +54,7 @@ public class AudioManager : MonoBehaviour
      
    }
 
-   private void Pause()
+   public void Pause()
    {
       foreach (var track in tracks)
          track.Pause();
@@ -87,11 +83,9 @@ public class AudioManager : MonoBehaviour
       }
    }
 
-   private void EditSong()
+   public void ShowMenu(InputAction.CallbackContext callbackContext)
    {
-      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Deus da Forca");
-
-      if (Input.GetKeyDown(KeyCode.Space))
+      if (callbackContext.performed)
       {
          pause = !pause;
          
@@ -106,5 +100,14 @@ public class AudioManager : MonoBehaviour
             UnPause();
          }
       }
+      
    }
+   
+   public void Reload(InputAction.CallbackContext callbackContext)
+   {
+      if (callbackContext.performed)
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+   }
+
+  
 }

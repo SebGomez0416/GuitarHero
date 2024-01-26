@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Tail : MonoBehaviour
@@ -39,38 +40,50 @@ public class Tail : MonoBehaviour
       init = true;
    }
 
+   private void OnEnable()
+   {
+      Bridge.OnTail += OffTail;
+   }
+
+   private void OnDisable()
+   {
+      Bridge.OnTail -= OffTail;
+   }
+
    private void Update()
    {
       Movement();
-      if (Input.GetButton(_colorNotes)&& _tail)
+      
+      if (_tail)
       {
-        if(!fire)
-        {
+         if (!fire)
+         {
             meshRenderer.material = materials[0];
             meshRenderer.materials[1].color = materials[1].color;
-            OnFire?.Invoke(true,transform.position.x);
+            OnFire?.Invoke(true, transform.position.x);
             fire = true;
-        }
-      }
-      else
-      {
-         if (fire)
-         {
-            OnWrongNote?.Invoke(true);
-            OnFire?.Invoke(false,transform.position.x);
-            meshRenderer.material = materials[2];
-            meshRenderer.materials[1].color = materials[3].color;
-           
-            fire = false;
-            _tail = false;
          }
       }
-
-      if (transform.position.z < 0)
+      
+      if (transform.position.z < -6.0f)
       {
          OnFire?.Invoke(false,transform.position.x);
          Destroy(gameObject);
       }
+   }
+
+   private void OffTail()
+   {
+        if (fire)
+        {
+           OnWrongNote?.Invoke(true);
+           OnFire?.Invoke(false,transform.position.x);
+           meshRenderer.material = materials[2];
+           meshRenderer.materials[1].color = materials[3].color;
+          
+           fire = false;
+           _tail = false;
+        }
    }
    
    private void Movement()

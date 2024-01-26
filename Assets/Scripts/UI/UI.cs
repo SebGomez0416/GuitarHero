@@ -14,10 +14,10 @@ public class UI : MonoBehaviour
 
     private void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        /*if (!Input.GetKeyDown(KeyCode.Escape)) return;
         play.SetActive(false);
         credits.SetActive(false);
-        menu.SetActive(true);
+        menu.SetActive(true);*/
     }
 
     public void Play()

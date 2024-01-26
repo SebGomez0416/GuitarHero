@@ -11,7 +11,7 @@ public class Track : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Green")|| Input.GetKeyDown(KeyCode.Alpha1))
+        /*if (Input.GetButtonDown("Green")|| Input.GetKeyDown(KeyCode.Alpha1))
         {
           Instantiate(green,Vector3.zero,quaternion.identity,this.transform);
           
@@ -33,6 +33,6 @@ public class Track : MonoBehaviour
         {
             Instantiate(blue,new Vector3(3,0,0),quaternion.identity,this.transform);
             
-        }
+        }*/
     }
 }

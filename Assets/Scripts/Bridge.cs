@@ -13,6 +13,7 @@ public class Bridge : MonoBehaviour
     private Material _cord;
     private bool easyMod;
     public static event Action <string> OnPlayNote;
+    public static event Action OnTail;
     private bool isActive;
     
 
@@ -38,9 +39,10 @@ public class Bridge : MonoBehaviour
         }
 
         if (callbackContext.canceled)
-        {
+        {   
             isActive = false;
             mesh.material = note;
+            OnTail?.Invoke();
             transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
         }
     }

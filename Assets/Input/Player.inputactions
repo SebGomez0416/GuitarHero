@@ -2,40 +2,67 @@
     "name": "Player",
     "maps": [
         {
-            "name": "Player",
-            "id": "30a4d3cf-3bd0-4fef-b4ca-9c3a4f49594a",
+            "name": "Notas",
+            "id": "53208d10-6b04-41ed-a2da-2e40a6c768e5",
             "actions": [
                 {
-                    "name": "Green",
+                    "name": "yellow",
                     "type": "Button",
-                    "id": "0db1b43a-a951-4b0e-b048-8cccb85a2e93",
+                    "id": "b4e7f81f-4680-4c10-90f6-be23b8430bfc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Red",
+                    "name": "green",
                     "type": "Button",
-                    "id": "9fb19905-ad44-49c9-baee-9ac3c2811942",
+                    "id": "170d9ae4-88b4-4c79-a4db-5b9758b541b0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Yellow",
+                    "name": "red",
                     "type": "Button",
-                    "id": "15c0849b-cf07-410e-af38-46c6ad77eec5",
+                    "id": "5ce2b7e9-fd7c-453f-88ac-5b04f50ed164",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Blue",
+                    "name": "blue",
                     "type": "Button",
-                    "id": "cf2b68b0-b930-4e04-96d3-6352c015b822",
+                    "id": "018d7304-33e6-4c3c-8f72-139ba596b396",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "fix_UI",
+                    "type": "Button",
+                    "id": "d5233961-9b5b-435e-a4de-a6f4efb7ca01",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "reload",
+                    "type": "Button",
+                    "id": "e930290b-fb95-4bc9-9d93-b618f9fd5b86",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "menu",
+                    "type": "Button",
+                    "id": "93b1eb3c-a4e8-4bdd-9d37-889b9263edb5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -45,45 +72,78 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f67df049-2286-4ec0-9e83-80a5b21a1f20",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Green",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fe260092-f815-411e-b978-a06718713884",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Red",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b32611c9-cf5a-4afb-8de7-6166c16e5887",
+                    "id": "7b297b63-b89e-4fec-9054-bbc0e4767704",
                     "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Yellow",
+                    "action": "yellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4178b2a1-88dc-4ad2-a2fd-f440be25c80b",
+                    "id": "1347c93b-3327-4e0d-af23-dea8712c6c8e",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "green",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c6c09b98-25b8-4374-b9e0-340a73ca7a83",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "red",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98c47ea9-10ba-4eff-9008-c885a687ecc2",
                     "path": "<Keyboard>/4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Blue",
+                    "action": "blue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6b49b15-bb80-4cf5-9340-b0d2085add0b",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "fix_UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f158234f-a216-4d48-8c01-06e13ca6f18b",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82057985-4714-4415-9733-1f848662db5b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
