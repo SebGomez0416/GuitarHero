@@ -1,6 +1,6 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Bridge : MonoBehaviour
@@ -15,7 +15,7 @@ public class Bridge : MonoBehaviour
     public static event Action <string> OnPlayNote;
     public static event Action OnTail;
     private bool isActive;
-    
+
 
     private void Awake()
     {
@@ -24,26 +24,40 @@ public class Bridge : MonoBehaviour
         easyMod = SceneManager.GetActiveScene().name == "Es el Amor" ? true : false;
     }
 
-    public void Nota(InputAction.CallbackContext callbackContext)
+    private void Update()
     {
-        if (callbackContext.performed)
+        foreach (Touch t in Input.touches)
         {
-            if (!isActive)
-            {
-                OnPlayNote?.Invoke(ColorNote);
-                isActive = true;
-            }
-            
-            mesh.material = playNote;
-            transform.position = new Vector3(transform.position.x, -0.45f, transform.position.z);
-        }
+            Ray ray = Camera.main.ScreenPointToRay(t.position);
+            RaycastHit hit;
 
-        if (callbackContext.canceled)
-        {   
-            isActive = false;
-            mesh.material = note;
-            OnTail?.Invoke();
-            transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
+            if (t.phase == TouchPhase.Began)
+            {
+                if (!Physics.Raycast(ray, out hit)) continue;
+                if (hit.collider.name == ColorNote)
+                { 
+                    if (!isActive)
+                    {
+                        OnPlayNote?.Invoke(ColorNote);
+                        isActive = true;
+                    }
+                    mesh.material = playNote;
+                    transform.position = new Vector3(transform.position.x, -0.45f, transform.position.z);
+                    
+                }
+
+            }
+            else if (t.phase == TouchPhase.Ended)
+            {
+                if (!isActive) continue;
+                isActive = false;
+                mesh.material = note;
+                OnTail?.Invoke();
+                transform.position = new Vector3(transform.position.x, -0.3f, transform.position.z);
+            }
+
         }
     }
+
+    
 }

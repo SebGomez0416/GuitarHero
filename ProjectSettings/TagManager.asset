@@ -6,6 +6,10 @@ TagManager:
   tags:
   - nota
   - badNote
+  - Green
+  - Red
+  - Yellow
+  - Blue
   layers:
   - Default
   - TransparentFX

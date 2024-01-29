@@ -48,7 +48,7 @@ public class Nota : MonoBehaviour
     {
         if (ColorNote != color) return;
         
-        if( transform.position.z <= 0.4f && transform.position.z >= -0.3f && isActive)
+        if( transform.position.z <= 0.40f && transform.position.z >= -0.35f && isActive)
         {
             isActive = false;
             if (tail != null)
@@ -65,7 +65,7 @@ public class Nota : MonoBehaviour
 
     private void FailNote()
     {
-        if (transform.position.z < -0.31f  && isActive)
+        if (transform.position.z < -0.36f  && isActive)
         {
             OnWrongNote?.Invoke(true);
             OnFail?.Invoke();

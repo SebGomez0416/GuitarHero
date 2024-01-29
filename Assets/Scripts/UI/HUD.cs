@@ -1,8 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
 {
@@ -158,7 +156,7 @@ public class HUD : MonoBehaviour
         notas++;
         failNotes--;
         if (failNotes < 0) failNotes = 0;
-        score += 100;
+        score += 25;
         Score.text=""+score;
     }
 

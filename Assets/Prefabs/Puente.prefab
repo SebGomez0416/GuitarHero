@@ -374,6 +374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red
       objectReference: {fileID: 0}
+    - target: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     - target: {fileID: 6837529062304256924, guid: 6bae53c886942814e95ccf4e60d7257e,
         type: 3}
       propertyPath: m_RootOrder
@@ -459,6 +464,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3411949089808755832}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &839169726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859061257479316830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11, y: 0.07000001, z: 0.16}
+  m_Center: {x: -0.001, y: 0.035000004, z: -2.4868996e-16}
 --- !u!114 &3411949089159320965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,6 +521,11 @@ PrefabInstance:
     - target: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
         type: 3}
       propertyPath: m_Name
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+        type: 3}
+      propertyPath: m_TagString
       value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 6837529062304256924, guid: 6bae53c886942814e95ccf4e60d7257e,
@@ -590,6 +613,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3411949090036721152}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1308368090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859061257251417894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11, y: 0.07000001, z: 0.16}
+  m_Center: {x: 0.005, y: 0.035000004, z: -2.4868996e-16}
 --- !u!114 &3411949090036721164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +675,11 @@ PrefabInstance:
     - target: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
         type: 3}
       propertyPath: m_Name
+      value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+        type: 3}
+      propertyPath: m_TagString
       value: Yellow
       objectReference: {fileID: 0}
     - target: {fileID: 6837529062304256924, guid: 6bae53c886942814e95ccf4e60d7257e,
@@ -726,6 +767,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3411949090885848249}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &476829862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859061258549822879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11, y: 0.07000001, z: 0.16}
+  m_Center: {x: 0.001, y: 0.035000004, z: -2.4868996e-16}
 --- !u!114 &3411949089488280930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +937,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6172210605550618918, guid: 6bae53c886942814e95ccf4e60d7257e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     - target: {fileID: 6837529062304256924, guid: 6bae53c886942814e95ccf4e60d7257e,
         type: 3}
       propertyPath: m_RootOrder
@@ -968,6 +1027,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7935836990503971810}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &811484361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290199170961810116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11, y: 0.07000001, z: 0.16}
+  m_Center: {x: -0.005, y: 0.035000004, z: -2.4868996e-16}
 --- !u!114 &7935836990503971822
 MonoBehaviour:
   m_ObjectHideFlags: 0
