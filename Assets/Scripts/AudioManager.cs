@@ -89,7 +89,8 @@ public class AudioManager : MonoBehaviour
 
    private void EditSong()
    {
-      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Deus da Forca");
+      if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Menu");
+      if (Input.GetKeyDown(KeyCode.Backspace)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
       if (Input.GetKeyDown(KeyCode.Space))
       {

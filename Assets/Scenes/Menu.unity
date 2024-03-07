@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -1213,7 +1213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 648566062}
-  - component: {fileID: 648566061}
+  - component: {fileID: 648566063}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1221,21 +1221,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &648566061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648566060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54dba03befee8c54d9899a768ef0f2c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 1343560738}
-  play: {fileID: 116592925}
-  credits: {fileID: 2130661533}
 --- !u!4 &648566062
 Transform:
   m_ObjectHideFlags: 0
@@ -1254,6 +1239,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &648566063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648566060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274a24ab7741ad7489d97b57cefe6f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1343560738}
+  play: {fileID: 116592925}
+  credits: {fileID: 2130661533}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -2989,7 +2989,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -3046,7 +3046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: -90.4}
+  m_AnchoredPosition: {x: -130, y: -37.40002}
   m_SizeDelta: {x: 394.4982, y: 76.9138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578144485
@@ -3093,7 +3093,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Credits
         m_Mode: 1
@@ -3197,7 +3197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -4205,7 +4205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: 54.32801}
+  m_AnchoredPosition: {x: -130, y: 107.32799}
   m_SizeDelta: {x: 250.7306, y: 88.9665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058035542
@@ -4252,7 +4252,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -4309,7 +4309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: -254}
+  m_AnchoredPosition: {x: -130, y: -201}
   m_SizeDelta: {x: 250.7306, y: 88.9665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2076636967
@@ -4356,7 +4356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648566061}
+      - m_Target: {fileID: 648566063}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
