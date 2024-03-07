@@ -85,7 +85,8 @@ public class AudioManager : MonoBehaviour
 
    public void ShowMenu(InputAction.CallbackContext callbackContext)
    {
-      if (callbackContext.performed)
+      SceneManager.LoadScene("Menu");
+      /*if (callbackContext.performed)
       {
          pause = !pause;
          
@@ -99,7 +100,7 @@ public class AudioManager : MonoBehaviour
             Time.timeScale = 1;
             UnPause();
          }
-      }
+      }*/
       
    }
    
@@ -109,5 +110,5 @@ public class AudioManager : MonoBehaviour
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    }
 
-  
+
 }

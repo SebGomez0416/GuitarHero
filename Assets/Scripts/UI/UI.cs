@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+
 
 public class UI : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class UI : MonoBehaviour
     {
         Cursor.visible = false;
     }
-    
+
     public void Back(InputAction.CallbackContext callbackContext)
     {
         play.SetActive(false);
@@ -52,6 +54,8 @@ public class UI : MonoBehaviour
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
+        play.SetActive(false);
+        menu.SetActive(true);
     }
 
 }

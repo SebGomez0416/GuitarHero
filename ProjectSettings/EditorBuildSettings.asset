@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: f9a989b6326f56c41b7efbef1fd90dd4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tiene Razon.unity
     guid: 6de7cf74bf0a0894e8a35d5135401c52
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sobre la Mesa.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Es el Amor.unity
     guid: f80a50cec57d30046b233fd7e7b5e9dd
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/Somos Ni\xF1os.unity"
     guid: 56ac4eb4abf3bc54688d3dc8176776f0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Alabarte.unity
     guid: 285e920a34ac62e409ebdaa7067e5d85
   - enabled: 1
